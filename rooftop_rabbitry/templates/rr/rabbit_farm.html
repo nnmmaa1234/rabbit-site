@@ -1,0 +1,176 @@
+{% extends 'base2.html' %}
+
+{% block content %}
+<div class="container" style="padding-top: 70px; padding-bottom: 50px;">
+    <div class="py-3" style="background-color: yellowgreen; border-radius: 20px;">
+        <h1 class="text-center my-3" style="font-family: 'Cabin Sketch', cursive; font-size: 60px;">Welcome to the Rabbit Section!</h1>
+        {% for breed in breeds %}
+        <div class="row m-3">
+            <div class="col-2 mr-3">
+                <h1 style="font-family: 'Mali',cursive; font-size: 20px; margin: 0%;">
+                    {{ breed.breed_name }}
+                </h1>
+            </div>
+            <div class="col-9" style="font-family: 'Mali',cursive;">
+                <p>{{breed.description}}</p>
+            </div>
+        </div>
+        {% endfor %} 
+        <h3 class="m-3" style="font-family: 'Cabin Sketch', cursive; font-size: 30px;">Available Rabbits</h3>
+        <div class="row ml-4">
+        
+        
+        <div class="col-md-4 mb-4">
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="../../static/images/shifu.jpg" alt="Card image cap">
+                <span class="position-absolute top-0 end-0 p-2" style="background-color: rgb(0, 255, 76); border-radius: 0 0 5px 0; color: rgb(12, 122, 2); box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);">
+                    <i class="fa-sharp fa-solid fa-leaf" style="color:rgb(2, 122, 2);"></i>
+                    Available
+                </span>
+                
+                <div class="card-body">
+                    <h5 class="card-title">Dwarf Hotot</h5>
+                    <p class="card-text">
+                    <div class="row my-3" style="font-family: 'Mali',cursive;">
+                        <div class="col" style="text-align: end;">
+                                <div>Name:</div>
+                                <div>Gender:</div>
+                                <div>Age:</div>
+                                <div>Weight:</div>
+                                <div>Price:</div>
+                        </div>
+                        <div class="col">
+                            <div>Shifu</div>
+                            <div>Male</div>
+                            <div>1.5</div>
+                            <div>1.5 kg</div>
+                            <div>5000 pkr</div>
+                        </div>
+                    </div>
+                    </p>
+                </div>
+                
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="../../static/images/sniffle.jpg" alt="Card image cap">
+                <span class="position-absolute top-0 end-0 p-2" style="background-color: rgb(0, 255, 76); border-radius: 0 0 5px 0; color: rgb(12, 122, 2); box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);">
+                    <i class="fa-sharp fa-solid fa-leaf" style="color:rgb(12, 122, 2);"></i>
+                    Available
+                </span>
+                
+                <div class="card-body">
+                    <h5 class="card-title">Dwarf Hotot</h5>
+                    <p class="card-text">
+                    <div class="row my-3" style="font-family: 'Mali',cursive;">
+                        <div class="col" style="text-align: end;">
+                                <div>Name:</div>
+                                <div>Gender:</div>
+                                <div>Age:</div>
+                                <div>Weight:</div>
+                                <div>Price:</div>
+                        </div>
+                        <div class="col">
+                            <div>Sniffle</div>
+                            <div>Male</div>
+                            <div>1</div>
+                            <div>0.8 kg</div>
+                            <div>6000 pkr</div>
+                        </div>
+                    </div>
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+        </div> 
+
+        <h3 class="m-3" style="font-family: 'Cabin Sketch', cursive; font-size: 30px;">Sold Rabbits</h3>
+        <div class="row ml-4">
+           
+            <!--MOCHI-->
+            <div class="col-md-4 mb-4">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="../../static/images/mochi.jpg" alt="Card image cap">
+                    <span class="position-absolute top-0 end-0 p-2" style="background-color: rgb(0, 225, 255); border-radius: 0 0 5px 0; color: rgb(2, 14, 122); box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);">
+                        <i class="fa-sharp fa-solid fa-leaf" style="color:rgb(2, 14, 122);"></i>
+                        Sold
+                    </span>
+                    
+                    <div class="card-body">
+                        <h5 class="card-title">Rex Rabbit</h5>
+                        <p class="card-text">
+                        <div class="row my-3" style="font-family: 'Mali',cursive;">
+                            <div class="col" style="text-align: end;">
+                                    <div>Name:</div>
+                                    <div>Gender:</div>
+                                    <div>Age:</div>
+                                    <div>Weight:</div>
+                                    <div>Price:</div>
+                            </div>
+                            <div class="col">
+                                <div>Mochi</div>
+                                <div>Male</div>
+                                <div>3</div>
+                                <div>2 kg</div>
+                                <div>900 pkr</div>
+                            </div>
+                        </div>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+        <h3 class="m-3" style="font-family: 'Cabin Sketch', cursive; font-size: 3s0px;">Reserved Rabbits</h3>
+        <div class="row ml-4">
+         
+                <!--ROSIE-->
+                <div class="col-md-4 mb-4">
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="../../static/images/rosie.jpg" alt="Card image cap">
+                        <span class="position-absolute top-0 end-0 p-2" style="background-color: rgb(255, 0, 234); border-radius: 0 0 5px 0; color: rgb(122, 2, 76); box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);">
+                            <i class="fa-sharp fa-solid fa-leaf" style="color:rgb(122, 2, 76);"></i>
+                            Reserved
+                        </span>
+                        
+                        <div class="card-body">
+                            <h5 class="card-title">New Zealand White</h5>
+                            <p class="card-text">
+                            <div class="row my-3" style="font-family: 'Mali',cursive;">
+                                <div class="col" style="text-align: end;">
+                                        <div>Name:</div>
+                                        <div>Gender:</div>
+                                        <div>Age:</div>
+                                        <div>Weight:</div>
+                                        <div>Price:</div>
+                                </div>
+                                <div class="col">
+                                    <div>Rosie</div>
+                                    <div>Female</div>
+                                    <div>4</div>
+                                    <div>2 kg</div>
+                                    <div>900 pkr</div>
+                                </div>
+                            </div>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            
+         </div>
+
+        <div class="info" style="text-align: center; font-family: 'Mali', cursive;">
+            <h2>For Purchasing Info:</h2>
+            <div>+92 *** ****** (phone number)</div>
+            <div>*********@gmail.com (email address)</div>
+            <div>@TheRooftopRabbitry (instagram)</div>
+            <div>@the_rooftop_rabbitry (facebook)</div>
+            <div style="color: red;">For Customers within Lahore, near Valencia Society.</div>
+        </div>
+
+    </div>
+</div>
+{% endblock %}

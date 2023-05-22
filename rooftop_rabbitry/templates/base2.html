@@ -1,0 +1,162 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS -->
+    <link rel="stylesheet" href="../static/css/style.css">
+    <!-- BOOTSTRAP -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- FONT AWSOME -->
+    <script src="https://kit.fontawesome.com/7baf1165ef.js" crossorigin="anonymous"></script>
+    
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@400;700&family=Mali&family=Quicksand&family=Rock+Salt&display=swap" rel="stylesheet">
+    
+    <title>The Rooftop Rabbitry</title>
+</head>
+<style>
+body{
+    background-image: url("../../static/images/8.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: relative;
+    min-height: 100vh;
+    }
+body::before {
+    content: ""; /* add a pseudo-element before the content of the div */
+    position: absolute; /* position the pseudo-element */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3); /* set the color of the overlay with an alpha value */
+    z-index: -1; /* set the z-index to be behind the content of the div */
+}
+nav{
+  background-color: transparent;
+}
+.navbar-brand,
+.dropdown-toggle,
+.navbar-nav a {
+  color: white;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px black;
+}
+.navbar-nav a {
+  position: relative;
+}
+.navbar-nav a::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background-color: white;
+  transition: width 0.2s ease, left 0.2s ease;
+  z-index: 1;
+}
+.navbar-nav a:hover::after {
+  width: 100%;
+  left: 0;
+}
+.nav-item{
+  margin-left: 20px;
+  font-family: 'Mali', cursive;
+}
+.navbar-scroll {
+  background-color: #333;
+  transition: background-color 0.5s ease-in-out;
+}
+.navbar-dark .navbar-toggler-icon {
+  color: #fff !important;
+} 
+  /* Default font size */
+  #font-size {
+    font-size: 30px;
+  }
+  
+  /* Font size for tablet view */
+  @media (max-width: 768px) {
+      #font-size {
+      font-size: 20px;
+    }
+  }
+  
+  /* Font size for mobile view */
+  @media (max-width: 576px) {
+      #font-size {
+      font-size: 13px;
+    }
+  }
+  .video-player {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .card{
+    font-family: 'Mali', cursive;
+    width: 18rem;
+    height: 30rem;
+    background-color: rgb(160, 35, 4);
+    color: white;
+    border:3px solid rgb(160, 35, 4);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.4);
+  
+  }
+</style>
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <a class="navbar-brand" style="color: rgb(39, 226, 55);" href="/">
+            <i class="fa-brands fa-envira"></i> The Rooftop Rabbitry</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="/rabbit-farm/">Rabbit Farm</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/fish-farm/">Fish Farm</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/contact-us/">Contact Us</a>
+            </li>
+          </ul>
+          <!-- <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <i class="fa-solid fa-user-plus"></i> Register</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/login/"><i class="fa-sharp fa-solid fa-right-to-bracket"></i> Login</a>
+            </li>
+          </ul> -->
+        </div>
+    </nav>
+    {% block content %}
+    {% endblock %}
+
+    <!-- JAVASCRIPT -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script>
+      $(window).scroll(function() {
+          var scroll = $(window).scrollTop();
+          if (scroll >= 100) {
+          $(".navbar").addClass("navbar-scroll");
+          } else {
+          $(".navbar").removeClass("navbar-scroll");
+          }
+      });
+    </script>
+</body>
+</html>
